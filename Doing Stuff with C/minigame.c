@@ -7,7 +7,7 @@ void setName(char userName[16]){
 	fclose(usernameFile);
 }
 
-void getName(char* userName[16]) {
+void getName(char* userName) {
 	FILE* usernameFile = fopen("user.name", "r");
 	fscanf(usernameFile, "%s", userName);
 	fclose(usernameFile);
@@ -17,7 +17,7 @@ int main() {
 	char answer[0];
 	char name[16];
 	int guess = 0;
-	getName(&name);
+	getName(name);
 	// Game Start
 	printf("Welcome, Adventurer!\n");
 	Sleep(800);
