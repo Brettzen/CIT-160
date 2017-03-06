@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Test</title>
+	<style>
+		.number {
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+	</style>
+	<script>
+		var clickAmount = 0;
+
+		function clickButton(daButton) {
+			clickAmount++;
+			document.getElementById("result").innerHTML = 
+				"<p>Good clicking, sir/madam!</p>" +
+				"<p>You've now clicked <span class='number'>" + clickAmount + "</span> times!</p>"
+				daButton.innerHTML = "Click again!";
+		}
+	</script>
+</head>
+<body>
+<button onclick="clickButton(this)">Click!</button>
+<div id="result"></div>
+</body>
+</html>
