@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Even or Odd</title>
+	<style>
+
+	</style>
+	<script>
+		function numChecker(num) {
+			var result = num%2;
+			var newDiv = document.createElement("DIV");
+			var newP = document.createElement("P");
+			var t;
+			if(result == 0) {
+				t = document.createTextNode("The number is even!");
+			} else {
+				t = document.createTextNode("The number is odd!");
+			}
+		    newP.appendChild(t);
+		    newDiv.appendChild(newP);
+		    document.body.appendChild(newDiv);
+
+		    document.getElementById("button").innerHTML = "Check a new number!";
+		}
+	</script>
+</head>
+<body>
+	<input id="numberInput" type="text" placeholder="Enter a number!">
+	<button id="button" onclick="numChecker(numberInput.value)">Check the number!</button>
+</body>
+</html>
