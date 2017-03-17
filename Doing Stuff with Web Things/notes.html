@@ -1,0 +1,43 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Note Taker</title>
+	<style>
+		.button {
+			padding: 5px;
+			text-align: center;
+			background-color: slateblue;
+			color: white;
+			width: 100px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.button:active {
+			background-color: darkslateblue;
+		}
+		textarea {
+			display: block;
+			width: 30%;
+			height: 200px;
+			margin: 10px 0;
+		}
+	</style>
+</head>	
+<body>
+
+<div class="notes">
+	<label for="description">Description: </label>
+		<input type="text" id="description">
+	<textarea id="newNote" placeholder="Enter your note here."></textarea>
+	<div class="button" onclick="saveNote()">Save</div>
+</div>
+	
+<script>
+	var currentDateAndTime = new Date();
+	var aNoteDescription = document.getElementById("description").value;
+	var aNoteContents = document.getElementById("newNote").value;
+	var aCompleteNote = currentDateAndTime.toLocaleString() + "--" + noteDescription + "<p>" + aNoteContents + "</p>";
+	var storedNotesString = localStorage.getItem("all_notes");
+</script>
+</body>
+</html>
